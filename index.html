@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deep Link Page</title>
+    <title>Dynamic Deep Link</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -48,14 +48,20 @@
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to My Page</h1>
-      <p>Click the button below to explore more.</p>
-      <button onclick="openDeepLink()">Open Deep Link</button>
+      <button onclick="generateDeepLink()">OPEN THEPATRONS APP</button>
     </div>
 
     <script>
-      function openDeepLink() {
-        window.location.href = "https://iqbalteravin.github.io/";
+      function generateDeepLink() {
+        // Ambil query parameter dari URL
+        const params = new URLSearchParams(window.location.search);
+        const query = params.toString();
+
+        // Tentukan scheme berdasarkan query parameter
+        const scheme = query ? `thepatrons://${query}` : "thepatrons://";
+
+        // Redirect ke scheme yang sesuai
+        window.location.href = scheme;
       }
     </script>
   </body>
