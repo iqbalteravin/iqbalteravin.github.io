@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        background: #fff;
         color: #fff;
       }
       .container {
@@ -27,14 +27,14 @@
         padding: 10px 20px;
         font-size: 1rem;
         color: #fff;
-        background: #007bff;
+        background: #ff8f02;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
       button:hover {
-        background: #0056b3;
+        background: #6d3d02;
       }
     </style>
   </head>
@@ -45,17 +45,12 @@
 
     <script>
       function generateDeepLink() {
-        console.log("Function generateDeepLink triggered");
-
         // Ambil query parameter dari URL
         const params = new URLSearchParams(window.location.search);
         const query = params.toString();
 
         // Tentukan scheme berdasarkan query parameter
         const scheme = query ? `thepatrons://${query}` : "thepatrons://";
-
-        // Log skema yang dihasilkan
-        console.log("Generated Scheme: ", scheme);
 
         // Redirect ke scheme yang sesuai
         window.location.href = scheme;
