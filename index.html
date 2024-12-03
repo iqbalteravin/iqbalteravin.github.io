@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Deep Link</title>
+    <title>ThePatrons Deep Link</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -40,11 +40,11 @@
   </head>
   <body>
     <div class="container">
-      <button onclick="generateDeepLink()">OPEN THEPATRONS APP</button>
+      <p>Redirecting to the app...</p>
     </div>
 
     <script>
-      function generateDeepLink() {
+      document.addEventListener("DOMContentLoaded", () => {
         // Ambil query parameter dari URL
         const params = new URLSearchParams(window.location.search);
         const query = params.toString();
@@ -54,7 +54,7 @@
 
         // Redirect ke scheme yang sesuai
         window.location.href = scheme;
-      }
+      });
     </script>
   </body>
 </html>
