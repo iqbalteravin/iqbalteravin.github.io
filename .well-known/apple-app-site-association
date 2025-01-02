@@ -1,0 +1,16 @@
+{
+   "applinks": {
+     "details": [
+       {
+         "appIDs": [ "KX7VEG7L3Z.co.teraglobal.patrons"],
+         "components": [
+           {
+             "/": "*",
+             "comment": "Matches all other URLs and opens the app."
+           }
+         ]
+       }
+     ]
+   }
+ }
+ 
